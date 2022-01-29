@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Josefin+Sans&family=Ubuntu:wght@500&display=swap');
+
+body{
+    font-family: 'Cabin', sans-serif;
+    margin: 0;
+    background-color:beige;
+    height: auto;
+}
+
+nav {
+    justify-content: top;
+    align-items: top;
+    padding-left: 2rem;
+    
+}
+
+.nav-list{
+    position:fixed;
+    width:30vw;
+    height: vh;
+    background-color:transparent;
+    float: left;
+    text-align: left;
+    transition: all 0.5s;
+    margin-top: 6rem;
+    text-decoration: none;
+   
+    
+}
+
+.nav-list li{
+    opacity: 0;
+    line-height: .5rem;
+    transition: all 0.5s;
+    margin-top: 3rem;
+    text-decoration: none;
+    list-style: none;
+    width: auto;
+
+}
+
+.nav-list li a{
+    color: black;
+    text-decoration: none;
+}
+
+.active:hover
+{
+    color:skyblue;
+    transition: 1s;
+}
+
+
+.hamburger-btn{
+    position: fixed;
+    display: block;
+    font-size: 2.5rem;
+    color:black;
+    line-height: 3rem;
+    cursor: pointer;
+    float: left;
+    margin-left: 1rem;
+    margin-top: 4.5rem;
+    
+}
+
+#check  {
+    display: none;
+}
+
+#check:checked ~ .nav-list li{
+    opacity: 1;
+    transition: 2s;
+}
+
+
+
+h1 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 0;
+
+}
+h2{
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+main{
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.2),
+    -30px 0px 40px rgba(0, 0, 0, 0.2);
+}
+
+#landing-page{
+background: #ffff;
+}
+
+#landing-text{
+    display: flex;
+    flex: 0 1 40vw;
+    height: 50vw ;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+
+}
+#landing-text h2{
+    color:gray;
+}
+
+#landing-picture{
+    background:url(/Pictures/signal-2022-01-29-195015.jpeg);
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    flex: 0 1 60vw;
+    margin: 0 ;
+
+}
+
+#back{
+    justify-content: right;
+    position:fixed;
+    margin-top: 38rem;
+    margin-left: 1.5rem;
+    background: transparent;
+}
+.btn{
+     
+     display: inline-block;
+     opacity: 1;
+     line-height: .5rem;
+     transition: all 2s;
+     text-decoration: none;
+     color: black ;
+ }
+
+.btn:hover{
+    color:skyblue;
+    transition: 00.5s;
+}
+#header{
+    padding: 1.5rem;
+    text-align: center;
+    background: #333;
+    color: white;
+}
+
+#header h2{
+    border-left: dotted 1px white;
+    border-right: dotted 1px white;
+    display: inline-block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.tag{
+    padding: 1rem;
+    text-align: center;
+    
+}
+
+footer{
+    text-align: center;
+    padding: 2rem 1rem;
+    margin: auto;
+    color: #333;
+}
+
+footer h3{
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+@media(min-width: 500px){
+    #landing-page{
+        display: flex;
+        height: 100%;
+    }
+
+    #landing-text{
+        height: 100vh;
+    }
+
+    #landing-picture{
+        height: 100vh;
+    }
+
+    .hamburger-btn{
+        display: none;
+    }
+    .nav-list li{
+        opacity: 1;
+        line-height: 2rem;
+        transition: all 0.5s;
+        margin-top: 3rem;
+        text-decoration: none;
+        list-style: none;
+    }
+    nav {
+    
+        max-width: max-content;
+        display:flex;
+        justify-content: baseline;
+        background-color: transparent;
+        display: inline-block;
+     }
+    
+
+}
+
+@media(min-width: 700px){
+    .btn{
+        padding: 1rem 3rem;
+    }
+
+    .hamburger-btn{
+        display: none;
+    }
+
+    .nav-list li{
+        opacity: 1;
+        line-height: 2rem;
+        transition: all 0.5s;
+        margin-top: 3rem;
+        text-decoration: none;
+        list-style: none;
+        display: inline;
+        margin-inline-end: 1rem;
+    }
+    nav {
+        display:flex;
+        justify-content:baseline;
+        background-color: transparent;
+    }
+}
